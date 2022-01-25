@@ -714,7 +714,10 @@
 
         gtag('config', 'UA-159914484-1');
     </script>
-
+    <!--force redirect to https-->
+    if(/https/.test(window.location.protocol)){
+    window.location.href = window.location.href.replace('http:', 'https:');    
+}
 </body>
 
 </html>
