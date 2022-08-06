@@ -6,12 +6,20 @@
 
 module.exports = {
     siteName: 'Art and Music - Λαμπρινίδης Δημήτρης',
+    transformers: {
+        remark: {
+            externalLinksTarget: '_blank',
+            externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+            anchorClassName: 'icon icon-link'
+        }
+    },
+
     plugins: [
         {
             use: '@gridsome/source-filesystem',
             options: {
-                path: 'posts/**/*.md',
-                typeName: 'Post'
+                path: 'uploads/*',
+                typeName: 'New'
             }
         },
         {
@@ -19,5 +27,6 @@ module.exports = {
             options: {
                 publicPath: `/admin`
             }
-        },]
+        },
+    ]
 }
