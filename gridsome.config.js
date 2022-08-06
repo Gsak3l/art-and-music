@@ -5,6 +5,19 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Art and Music - Λαμπρινίδης Δημήτρης',
-  plugins: []
+    siteName: 'Art and Music - Λαμπρινίδης Δημήτρης',
+    plugins: [
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                path: 'posts/**/*.md',
+                typeName: 'Post'
+            }
+        },
+        {
+            use: `gridsome-plugin-netlify-cms`,
+            options: {
+                publicPath: `/admin`
+            }
+        },]
 }

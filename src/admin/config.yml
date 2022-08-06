@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  repo: gsak3l/art-and-music
+  branch: gridsome-based
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "new_musical"
+    label: "Νέα Μουσικά Όργανα"
+    folder: "uploads"
+    create: true
+    slug: "{{slug}}-{{year}}-{{month}}-{{day}}"
+    fields:
+      - { label: "Τίτλος", name: "title", widget: "string" }
+      - { label: "Υπότιτλος", name: "subtitle", widget: "string" }
+      - { label: "Τιμή", name: "price", widget: "string" }
+
+  - name: "used_musical"
+    label: "Μεταχειρισμένα Μουσικά Όργανα"
+    folder: "uploads"
+    create: true
+    slug: "{{slug}}-{{year}}-{{month}}-{{day}}"
+    fields:
+      - { label: "Τίτλος", name: "title", widget: "string" }
+      - { label: "Υπότιτλος", name: "subtitle", widget: "string" }
+      - { label: "Τιμή", name: "price", widget: "string" }
