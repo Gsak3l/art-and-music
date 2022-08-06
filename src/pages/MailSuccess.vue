@@ -22,7 +22,10 @@
 
 <script>
 export default {
-  name: "AppMailSuccess"
+  name: "MailSuccess",
+  metaInfo: {
+    title: 'Επιτυχία'
+  }
 }
 </script>
 

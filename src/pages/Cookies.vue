@@ -22,7 +22,10 @@
 
 <script>
 export default {
-  name: "AppCookies"
+  name: "Cookies",
+  metaInfo: {
+    title: 'Cookies'
+  }
 }
 </script>
 

@@ -314,7 +314,10 @@
 
 <script>
 export default {
-  name: "AppPolicy"
+  name: "Policy",
+  metaInfo: {
+    title: 'Πολιτική Απορρήτου'
+  }
 }
 </script>
 

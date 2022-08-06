@@ -55,15 +55,12 @@
       </div>
     </div>
   </section>
-  <AppTutorialPopups/>
 </template>
 
 <script>
-import AppTutorialPopups from "@/components/tutorials/AppTutorialPopups";
-
 export default {
   name: "AppTutorials",
-  components: {AppTutorialPopups}
+  components: {}
 }
 </script>
 

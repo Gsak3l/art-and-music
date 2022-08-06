@@ -1,46 +1,47 @@
 <template>
-  <div id="new-musical-instruments"></div>
-  <section id="portfolio" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="text-uppercase section-heading">Καινουργια πνευστα μουσικα οργανα</h2>
-          <div class="section-subheading text-muted">
+  <div id="new-musical-instruments">
+    <section id="portfolio" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="text-uppercase section-heading">Καινουργια πνευστα μουσικα οργανα</h2>
+            <div class="section-subheading text-muted">
+              <br/>
+              Κλαρίνα Buffet Crampon, Selmer, Keilwerth, Orsi, Leblanc.
+              <br/>
+              Φλάουτα Buffet, Selmer, Trevor James.
+              <br/>
+              Σαξόφωνα (σοπράνο, άλτο, τενόρο), Yanagisawa, Selmer, Bundy, Jupiter, Trevor James.
+              <br/>
+              Τρομπέτες Bach, Conn, King, Schilke, Besson, Holton, B&amp;H.
+              <br/>
+              Τρομπόνα Bach, Besson, B&amp;H.
+              <br/>
+              Φλικόρνα Bach. Κόρνα (μονό, διπλό), Holton. Βαρύτονα Besson, Jupiter, B&amp;H.
+              <br/>
+              Ευφώνια Besson, Jupiter, B&amp;H, Wilson.
+              <br/>
+              Τούμπα (μι ύφεση, σι ύφεση), Besson, B&amp;H, Amati, Wilson.
+              <br/>
+              Φαγκότα (κατά παραγγελία).&nbsp;
+            </div>
             <br/>
-            Κλαρίνα Buffet Crampon, Selmer, Keilwerth, Orsi, Leblanc.
-            <br/>
-            Φλάουτα Buffet, Selmer, Trevor James.
-            <br/>
-            Σαξόφωνα (σοπράνο, άλτο, τενόρο), Yanagisawa, Selmer, Bundy, Jupiter, Trevor James.
-            <br/>
-            Τρομπέτες Bach, Conn, King, Schilke, Besson, Holton, B&amp;H.
-            <br/>
-            Τρομπόνα Bach, Besson, B&amp;H.
-            <br/>
-            Φλικόρνα Bach. Κόρνα (μονό, διπλό), Holton. Βαρύτονα Besson, Jupiter, B&amp;H.
-            <br/>
-            Ευφώνια Besson, Jupiter, B&amp;H, Wilson.
-            <br/>
-            Τούμπα (μι ύφεση, σι ύφεση), Besson, B&amp;H, Amati, Wilson.
-            <br/>
-            Φαγκότα (κατά παραγγελία).&nbsp;
-          </div>
-          <br/>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 col-md-4 portfolio-item" v-for="instrument in new_musical_instruments"
-             :key="instrument.id">
-          <img class="img-fluid" v-bind:src="instrument.src" alt=""/>
-          <div class="portfolio-caption">
-            <h4>{{ instrument.title }}</h4>
-            <p class="text-muted"><strong>{{ instrument.subtitle }}</strong></p>
-            <p class="text-muted"><strong>{{ instrument.price }}</strong></p>
           </div>
         </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 portfolio-item" v-for="instrument in new_musical_instruments"
+               :key="instrument.id">
+            <img class="img-fluid" v-bind:src="instrument.src" alt=""/>
+            <div class="portfolio-caption">
+              <h4>{{ instrument.title }}</h4>
+              <p class="text-muted"><strong>{{ instrument.subtitle }}</strong></p>
+              <p class="text-muted"><strong>{{ instrument.price }}</strong></p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>

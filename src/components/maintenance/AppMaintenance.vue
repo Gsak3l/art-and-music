@@ -55,15 +55,13 @@
       </div>
     </div>
   </section>
-  <AppMaintenancePopups/>
 </template>
 
 <script>
-import AppMaintenancePopups from "@/components/maintenance/AppMaintenancePopups";
 
 export default {
   name: "AppMaintenance",
-  components: {AppMaintenancePopups}
+  components: {}
 }
 </script>
 
