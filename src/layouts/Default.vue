@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <Navigation/>
-    <slot/>
+    <slot></slot>
     <Footer/>
   </div>
 </template>
@@ -23,4 +23,5 @@ import Footer from "./Footer";
 export default {
   components: {Footer, Navigation}
 }
+
 </script>

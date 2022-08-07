@@ -3,7 +3,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Art and Music 2020</span></div>
+          <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Art and Music 2022</span></div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
