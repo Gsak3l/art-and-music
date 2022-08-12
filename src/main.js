@@ -9,7 +9,7 @@ import '~/assets/css/purecookie.css'
 import '~/assets/js/main.js'
 // import '~/assets/js/jquery.min.js'
 // import '~/assets/bootstrap/js/bootstrap.min.js'
-// import '~/assets/js/purecookie.js'
+import '~/assets/js/purecookie.js'
 // import '~/assets/js/agency.js'
 
 export default function (Vue, {router, head, isClient}) {
@@ -36,14 +36,6 @@ export default function (Vue, {router, head, isClient}) {
     })
     head.script.push({
         src: 'https://www.googletagmanager.com/gtag/js?id=UA-159914484-1',
-        body: true
-    })
-    head.script.push({
-        src: 'https://unpkg.com/vue/dist/vue.jsgr',
-        body: true
-    })
-    head.script.push({
-        src: 'https://unpkg.com/vue-cookies@1.8.1/vue-cookies.js',
         body: true
     })
 
