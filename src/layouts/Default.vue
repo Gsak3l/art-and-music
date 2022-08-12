@@ -19,19 +19,20 @@ metadata {
 </style>
 <script>
 import Navigation from "./Navigation";
+
 import Footer from "./Footer";
 export default {
   components: {Footer, Navigation}
 }
 
-window.dataLayer = window.dataLayer || [];
-
-function gtag() {
-  dataLayer.push(arguments);
-}
-
-gtag('js', new Date());
-
-gtag('config', 'UA-159914484-1');
+// window.dataLayer = window.dataLayer || [];
+//
+// function gtag() {
+//   dataLayer.push(arguments);
+// }
+//
+// gtag('js', new Date());
+//
+// gtag('config', 'UA-159914484-1');
 
 </script>

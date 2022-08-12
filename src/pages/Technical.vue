@@ -2,7 +2,6 @@
   <Layout>
     <AppTechnical/>
     <AppTechnicalPopups/>
-
   </Layout>
 </template>
 
