@@ -3,8 +3,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="text-uppercase section-heading">Τεχνικη εργασια</h2>
-          <h3 class="section-subheading text-muted">Τεχνική εργασία - Είδη επισκευής</h3>
+          <h2 class="text-uppercase section-heading">ΕΠΙΣΚΕΥΗ</h2>
+          <h3 class="section-subheading text-muted">Επισκευή πνευστών μουσικών οργάνων</h3>
         </div>
       </div>
       <div class="row">
@@ -13,10 +13,10 @@
             <div class="portfolio-hover">
               <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
             </div>
-            <img class="img-fluid" src="assets/img/technical work/clarinetrepair.jpg">
+            <img class="img-fluid" src="assets/img/repairs/allagisoustas.jpg">
           </a>
           <div class="portfolio-caption">
-            <p class="text-muted">Γενική επισκευή κλαρίνου - κλαρινέτου</p>
+            <p class="text-muted">Επισκευή κλαρίνου, αλλαγή ελατηρίου - σούστας</p>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 portfolio-item">
@@ -24,10 +24,10 @@
             <div class="portfolio-hover">
               <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
             </div>
-            <img class="img-fluid" src="assets/img/technical work/saxsmall.png">
+            <img class="img-fluid" src="assets/img/repairs/allagitapwn.jpg">
           </a>
           <div class="portfolio-caption">
-            <p class="text-muted">Γενική επισκευή σαξοφώνου, άλτο, τενόρο, σοπράνο</p>
+            <p class="text-muted">Επισκευή κλαρίνου, αλλαγή ταπών</p>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 portfolio-item">
@@ -35,10 +35,10 @@
             <div class="portfolio-hover">
               <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
             </div>
-            <img class="img-fluid" src="assets/img/technical work/flutev2.jpg">
+            <img class="img-fluid" src="assets/img/repairs/allagifelwn.gif">
           </a>
           <div class="portfolio-caption">
-            <p class="text-muted">Γενική επισκευή φλάουτου</p>
+            <p class="text-muted">Επισκευή τρομπέτας, αλλαγή φελλών</p>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 portfolio-item">
@@ -46,24 +46,23 @@
             <div class="portfolio-hover">
               <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
             </div>
-            <img class="img-fluid" src="assets/img/technical work/trumpet.jpg">
+            <img class="img-fluid" src="assets/img/repairs/kollisikleidiou.jpg">
           </a>
           <div class="portfolio-caption">
-            <p class="text-muted">Γενική επισκευή τρομπέτας</p>
+            <p class="text-muted">Επισκευή κλαρίνου, κόλληση σπασμένου κλειδιού</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <AppTechnicalPopups/>
+  <AppMaintenancePopups/>
 </template>
 
 <script>
-import AppTechnicalPopups from "@/components/technical/AppTechnicalPopups";
-
 export default {
-  name: "AppTechnical",
-  components: {AppTechnicalPopups}
+
+  name: "AppRepairsBody",
+  components: {}
 }
 </script>
 

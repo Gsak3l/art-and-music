@@ -24,7 +24,6 @@ export default {
     AppNew,
     AppUsed,
     AppParts,
-
   },
 }
 </script>

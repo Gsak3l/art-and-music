@@ -127,7 +127,7 @@
 
 <script>
 export default {
-  name: "AppTutorialPopups"
+  name: "AppTutorialsPopups"
 }
 </script>
 

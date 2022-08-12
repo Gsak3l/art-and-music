@@ -1,13 +1,13 @@
 import {createRouter, createWebHistory} from "vue-router/dist/vue-router";
 
-import AppHome from "./components/home/AppHome";
-import AppCookies from "./components/AppCookies";
-import AppPolicy from "./components/AppPolicy";
-import AppTutorials from "./components/tutorials/AppTutorials";
-import AppTechnical from "./components/technical/AppTechnical";
-import AppRepairs from "./components/repairs/AppRepairs";
-import AppMaintenance from "./components/maintenance/AppMaintenance";
-import AppMailSuccess from "@/components/AppMailSuccess";
+import AppHome from "@/pages/AppHome";
+import AppCookies from "@/pages/AppCookies";
+import AppPolicy from "@/pages/AppPolicy";
+import AppTutorials from "@/pages/AppTutorials";
+import AppTechnical from "@/pages/AppTechnical";
+import AppRepairs from "@/pages/AppRepairs";
+import AppMaintenance from "@/pages/AppMaintenance";
+import AppMailSuccess from "@/pages/AppMailSuccess";
 
 
 export default createRouter({

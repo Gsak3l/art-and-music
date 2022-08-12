@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import AppHeader from "@/components/AppNavigation";
-import AppFooter from "@/components/AppFooter";
+import AppHeader from "@/layouts/AppNavigation";
+import AppFooter from "@/layouts/AppFooter";
 
 export default {
   name: "App",

@@ -1,27 +1,27 @@
 // --- Config --- //
-var purecookieTitle = "Cookies."; // Title
-var purecookieDesc = "Η ιστοσελίδα μας χρησιμοποιεί cookies και άλλες τεχνολογίες για να μπορέσουμε να βελτιώσουμε την εμπειρία σας κατά την επίσκεψη σας. Συνεχίζοντας την περιήγηση στον ιστότοπό μας, συμφωνείτε με τη χρήση τους."; // Description
-var purecookieLink = '<a href="/cookies" target="_blank">Για ποιο λόγο;</a>'; // Cookiepolicy link
-var purecookieButton = "Καταλαβαίνω"; // Button text
+const pureCookieTitle = "Cookies."; // Title
+const pureCookieDesc = "Η ιστοσελίδα μας χρησιμοποιεί cookies και άλλες τεχνολογίες για να μπορέσουμε να βελτιώσουμε την εμπειρία σας κατά την επίσκεψη σας. Συνεχίζοντας την περιήγηση στον ιστότοπό μας, συμφωνείτε με τη χρήση τους."; // Description
+const pureCookieLink = '<a href="/cookies" target="_blank">Για ποιο λόγο;</a>'; // Cookiepolicy link
+const pureCookieButton = "Καταλαβαίνω"; // Button text
 // ---        --- //
 
 
 function pureFadeIn(elem, display) {
-    var el = document.getElementById(elem);
+    let el = document.getElementById(elem);
     el.style.opacity = 0;
     el.style.display = display || "block";
 
     (function fade() {
-        var val = parseFloat(el.style.opacity);
+        let val = parseFloat(el.style.opacity);
         if (!((val += .02) > 1)) {
             el.style.opacity = val;
             requestAnimationFrame(fade);
         }
     })();
-};
+}
 
 function pureFadeOut(elem) {
-    var el = document.getElementById(elem);
+    const el = document.getElementById(elem);
     el.style.opacity = 1;
 
     (function fade() {
@@ -34,9 +34,9 @@ function pureFadeOut(elem) {
 };
 
 function setCookie(name, value, days) {
-    var expires = "";
+    let expires = "";
     if (days) {
-        var date = new Date();
+        const date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         expires = "; expires=" + date.toUTCString();
     }
@@ -44,12 +44,12 @@ function setCookie(name, value, days) {
 }
 
 function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
     }
     return null;
 }
@@ -59,14 +59,14 @@ function eraseCookie(name) {
 }
 
 function cookieConsent() {
-    if (!getCookie('purecookieDismiss')) {
-        document.getElementById('cookie-div').innerHTML = '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p>' + purecookieDesc + ' ' + purecookieLink + '</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">' + purecookieButton + '</a></div></div>';
+    if (!getCookie('pureCookieDismiss')) {
+        document.getElementById('cookie-div').innerHTML = '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + pureCookieTitle + '</a></div><div class="cookieDesc"><p>' + pureCookieDesc + ' ' + pureCookieLink + '</p></div><div class="cookieButton"><a onClick="pureCookieDismiss();">' + pureCookieButton + '</a></div></div>';
         pureFadeIn("cookieConsentContainer");
     }
 }
 
-function purecookieDismiss() {
-    setCookie('purecookieDismiss', '1', 7);
+function pureCookieDismiss() {
+    setCookie('pureCookieDismiss', '1', 7);
     pureFadeOut("cookieConsentContainer");
 }
 
