@@ -1,5 +1,5 @@
 <template>
-	<section id="contact" style="background-image: url('assets/img/main%20images/greeceHigh.svg')">
+	<section id="contact" style="background-image: url('assets/img/main_images/greeceHigh.svg')">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
