@@ -2,7 +2,7 @@
 
   <header
       class="masthead"
-      id="bg-image"
+      id="background-image"
       style="background-image: url('assets/img/main_images/saxophoneBlurred.jpg');
         background-color: #343a40;
         filter: blur(0px);
@@ -40,8 +40,7 @@ export default {
       ]
       setInterval(function () {
             let image = Math.floor(Math.random() * background_images.length)
-            console.log(image)
-            document.getElementById('bg-image').style.backgroundImage =
+            document.getElementById('background-image').style.backgroundImage =
                 background_images[image];
           }, 7000
       )

@@ -29,12 +29,12 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-6 col-md-4 portfolio-item" v-for="instrument in new_musical_instruments"
-             :key="instrument.id">
-          <img class="img-fluid" v-bind:src="instrument.src" alt=""/>
+        <div v-for="instrument in new_musical_instruments" v-bind:key="instrument.id"
+             class="col-sm-6 col-md-4 portfolio-item">
+          <img class="img-fluid" v-bind:src="instrument.image" :alt="instrument.description"/>
           <div class="portfolio-caption">
             <h4>{{ instrument.title }}</h4>
-            <p class="text-muted"><strong>{{ instrument.subtitle }}</strong></p>
+            <p class="text-muted"><strong>{{ instrument.description }}</strong></p>
             <p class="text-muted"><strong>{{ instrument.price }}</strong></p>
           </div>
         </div>
@@ -52,57 +52,57 @@ export default {
       new_musical_instruments: [
         {
           title: 'Besson BE800',
-          subtitle: 'Τρομπέτα Besson BE800',
+          description: 'Τρομπέτα Besson BE800',
           price: '700€',
-          src: 'assets/img/new%20musical%20instruments/bessonBE800.jpg'
+          image: 'assets/img/new_musical_instruments/bessonBE800.jpg'
         },
         {
           title: 'Bach Stradivarius 183G',
-          subtitle: 'Φλικόρνο Bach Stradivarius 183G',
+          description: 'Φλικόρνο Bach Stradivarius 183G',
           price: '2000€',
-          src: 'assets/img/new%20musical%20instruments/BachStradivarius183G.jpg'
+          image: 'assets/img/new_musical_instruments/BachStradivarius183G.jpg'
         },
         {
           title: 'Stradivarius C180L',
-          subtitle: 'Τρομπέτα Bach C180L',
+          description: 'Τρομπέτα Bach C180L',
           price: '2000€',
-          src: 'assets/img/new%20musical%20instruments/BachStradivariusC180L.jpg'
+          image: 'assets/img/new_musical_instruments/BachStradivariusC180L.jpg'
         },
         {
           title: 'Bb Buffet B10',
-          subtitle: 'Τρομπέτα Besson BE800',
+          description: 'Τρομπέτα Besson BE800',
           price: '500€',
-          src: 'assets/img/new%20musical%20instruments/bbBuffetB10.jpg'
+          image: 'assets/img/new_musical_instruments/bbBuffetB10.jpg'
         },
         {
           title: 'Bb Buffet RC',
-          subtitle: 'Κλαρίνο Bb Buffet RC',
+          description: 'Κλαρίνο Bb Buffet RC',
           price: '2000€',
-          src: 'assets/img/new%20musical%20instruments/bbBuffetRC.jpg'
+          image: 'assets/img/new_musical_instruments/bbBuffetRC.jpg'
         },
         {
           title: 'Yanagisawa A990',
-          subtitle: 'Σαξόφωνο Yanagisawa A990',
+          description: 'Σαξόφωνο Yanagisawa A990',
           price: '2500€',
-          src: 'assets/img/new%20musical%20instruments/YanagisawaA990-01.jpg'
+          image: 'assets/img/new_musical_instruments/YanagisawaA990-01.jpg'
         },
         {
           title: 'Jupiter JAS-565',
-          subtitle: 'Σαξόφωνο Jupiter JAS-565',
+          description: 'Σαξόφωνο Jupiter JAS-565',
           price: '600€',
-          src: 'assets/img/used%20musical%20instruments/jupiterJAS565.jpg'
+          image: 'assets/img/used_musical_instruments/jupiterJAS565.jpg'
         },
         {
           title: 'Selmer FL300',
-          subtitle: 'Φλάουτο Selmer FL300',
+          description: 'Φλάουτο Selmer FL300',
           price: '450€',
-          src: "assets/img/new%20musical%20instruments/selmerFL300.jpg"
+          image: "assets/img/new_musical_instruments/selmerFL300.jpg"
         },
         {
           title: 'Bach TR300',
-          subtitle: 'Τρομπέτα Bach TR300',
+          description: 'Τρομπέτα Bach TR300',
           price: '600€',
-          src: "assets/img/new%20musical%20instruments/bachTR300.jpg"
+          image: "assets/img/new_musical_instruments/bachTR300.jpg"
         },
       ]
     }

@@ -6,7 +6,8 @@
 					<h2 class="text-uppercase section-heading">επικοινωνηστε</h2>
 					<h3 class="section-subheading" style="color: white">
 						Στείλτε μας email μέσω της παρακάτω φόρμας επικοινωνίας <br />
-						ή κάλεστε μας στο 2310-2336652 & 6934690502
+						ή κάλεστε μας στο
+            <a href="tel:23102336652">2310-2336652</a> & <a href="tel:6934690502">693 469 0502</a>
 					</h3>
 				</div>
 			</div>

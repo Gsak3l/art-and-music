@@ -1,10 +1,9 @@
 <template>
   <nav
       class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark"
-      id="mainNav"
-  >
+      id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="/">Art and Music</a>
+      <a class="navbar-brand" href="/#">Art and Music</a>
       <button
           data-toggle="collapse"
           data-target="#navbarResponsive"
@@ -61,7 +60,7 @@ export default {
         {text: "ποιοι ειμαστε", link: "/#about", drop: false},
         {
           text: "υπηρεσιεσ",
-          link: "/#services",
+          link: "#",
           drop: true,
           drop_items: [
             {
