@@ -7,62 +7,55 @@
           <h3 class="section-subheading text-muted">Επισκευή πνευστών μουσικών οργάνων</h3>
         </div>
       </div>
+
       <div class="row">
-        <div class="col-sm-6 col-md-4 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#guidemodal1">
+
+        <div v-for="item in repairs_body" v-bind:key="item.id" class="col-sm-6 col-md-4 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" :href="item.link">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
             </div>
-            <img class="img-fluid" src="assets/img/repairs/allagisoustas.jpg">
+            <img class="img-fluid" :src="item.image">
           </a>
           <div class="portfolio-caption">
-            <p class="text-muted">Επισκευή κλαρίνου, αλλαγή ελατηρίου - σούστας</p>
+            <p class="text-muted">{{ item.title }}</p>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#guidemodal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/repairs/allagitapwn.jpg">
-          </a>
-          <div class="portfolio-caption">
-            <p class="text-muted">Επισκευή κλαρίνου, αλλαγή ταπών</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#guidemodal3">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/repairs/allagifelwn.gif">
-          </a>
-          <div class="portfolio-caption">
-            <p class="text-muted">Επισκευή τρομπέτας, αλλαγή φελλών</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#guidemodal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/repairs/kollisikleidiou.jpg">
-          </a>
-          <div class="portfolio-caption">
-            <p class="text-muted">Επισκευή κλαρίνου, κόλληση σπασμένου κλειδιού</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
-  <AppMaintenancePopups/>
 </template>
 
 <script>
 export default {
-
   name: "AppRepairsBody",
-  components: {}
+  data() {
+    return {
+      repairs_body: [
+        {
+          title: "Επισκευή κλαρίνου, αλλαγή ελατηρίου - σούστας",
+          image: "assets/img/repairs/allagisoustas.jpg",
+          link: "#guidemodal1"
+        },
+        {
+          title: "Επισκευή κλαρίνου, αλλαγή ταπών",
+          image: "assets/img/repairs/allagitapwn.jpg",
+          link: "#guidemodal2"
+        },
+        {
+          title: "Επισκευή τρομπέτας, αλλαγή φελλών",
+          image: "assets/img/repairs/allagifelwn.gif",
+          link: "#guidemodal3"
+        },
+        {
+          title: "Επισκευή κλαρίνου, κόλληση σπασμένου κλειδιού",
+          image: "assets/img/repairs/kollisikleidiou.jpg",
+          link: "#guidemodal4"
+        }
+      ]
+    }
+  }
 }
 </script>
 

@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="row">
-        <div v-for="instrument in used_musical_instrimenrs" v-bind:key="instrument.id"
+        <div v-for="instrument in used_musical_instruments" v-bind:key="instrument.id"
              class="col-sm-6 col-md-4 portfolio-item">
           <img class="img-fluid" :src="instrument.image" :alt="instrument.description"/>
           <div class="portfolio-caption">
@@ -41,7 +41,7 @@ export default {
   name: "AppUsed",
   data() {
     return {
-      used_musical_instrimenrs: [
+      used_musical_instruments: [
         {
           title: 'Bb Selmer CL300',
           description: 'Κλαρίνο Bb Selmer CL300',

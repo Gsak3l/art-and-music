@@ -9,50 +9,18 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#guidemodal1">
+          <div v-for="item in maintenance_body" v-bind:key="item.id" class="col-sm-6 col-md-4 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" :href="item.link">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
               </div>
-              <img class="img-fluid" src="assets/img/maintance/clarinet service.jpg">
+              <img class="img-fluid" :src="item.image">
             </a>
             <div class="portfolio-caption">
-              <p class="text-muted">Συντήρηση κλαρίνου - κλαρινέτου</p>
+              <p class="text-muted">{{ item.title }}</p>
             </div>
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#guidemodal2">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-              </div>
-              <img class="img-fluid" src="assets/img/maintance/fluterepair.jpg">
-            </a>
-            <div class="portfolio-caption">
-              <p class="text-muted">Συντήρηση φλάουτου</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#guidemodal3">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-              </div>
-              <img class="img-fluid" src="assets/img/maintance/saxophoneservice.jpg">
-            </a>
-            <div class="portfolio-caption">
-              <p class="text-muted">Συντήρηση σαξοφώνου, άλτο, τενόρο, σορπράνο</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#guidemodal4">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-              </div>
-              <img class="img-fluid" src="assets/img/maintance/servicetrompetas.jpg">
-            </a>
-            <div class="portfolio-caption">
-              <p class="text-muted">Συντήρηση τρομπέτας</p>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
@@ -63,7 +31,32 @@
 
 export default {
   name: "AppMaintenanceBody",
-  components: {}
+  data() {
+    return {
+      maintenance_body: [
+        {
+          title: "Συντήρηση κλαρίνου - κλαρινέτου",
+          image: "assets/img/maintenance/clarinet_service.jpg",
+          link: "#guidemodal1"
+        },
+        {
+          title: "Συντήρηση φλάουτου",
+          image: "assets/img/maintenance/fluterepair.jpg",
+          link: "#guidemodal2"
+        },
+        {
+          title: "Συντήρηση τρομπέτας",
+          image: "assets/img/maintenance/servicetrompetas.jpg",
+          link: "#guidemodal3"
+        },
+        {
+          title: "Συντήρηση σαξοφώνου, άλτο, τενόρο, σορπράνο",
+          image: "assets/img/maintenance/saxophoneservice.jpg",
+          link: "#guidemodal4"
+        }
+      ]
+    }
+  },
 }
 </script>
 

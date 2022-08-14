@@ -8,48 +8,15 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-6 col-md-4 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#guidemodal1">
+        <div v-for="item in technical_body" v-bind:key="item.id" class="col-sm-6 col-md-4 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" :href="item.link">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
             </div>
-            <img class="img-fluid" src="assets/img/technical work/clarinetrepair.jpg">
+            <img class="img-fluid" :src="item.image" :alt="item.description">
           </a>
           <div class="portfolio-caption">
-            <p class="text-muted">Γενική επισκευή κλαρίνου - κλαρινέτου</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#guidemodal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/technical work/saxsmall.png">
-          </a>
-          <div class="portfolio-caption">
-            <p class="text-muted">Γενική επισκευή σαξοφώνου, άλτο, τενόρο, σοπράνο</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#guidemodal3">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/technical work/flutev2.jpg">
-          </a>
-          <div class="portfolio-caption">
-            <p class="text-muted">Γενική επισκευή φλάουτου</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#guidemodal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/technical work/trumpet.jpg">
-          </a>
-          <div class="portfolio-caption">
-            <p class="text-muted">Γενική επισκευή τρομπέτας</p>
+            <p class="text-muted">{{ item.description }}</p>
           </div>
         </div>
       </div>
@@ -60,7 +27,36 @@
 <script>
 export default {
   name: "AppTechnicalBody",
-  components: {}
+  data() {
+    return {
+      technical_body: [
+        {
+          title: "Γενική επισκευή κλαρίνου - κλαρινέτου",
+          description: "Γενική επισκευή κλαρίνου - κλαρινέτου",
+          image: "assets/img/technical_work/clarinetrepair.jpg",
+          link: "#guidemodal1"
+        },
+        {
+          title: "Γενική επισκευή σαξοφώνου, άλτο, τενόρο, σοπράνο",
+          description: "Γενική επισκευή σαξοφώνου, άλτο, τενόρο, σοπράνο",
+          image: "assets/img/technical_work/saxsmall.png",
+          link: "#guidemodal2"
+        },
+        {
+          title: "Γενική επισκευή φλάουτου",
+          description: "Γενική επισκευή φλάουτου",
+          image: "assets/img/technical_work/flutev2.jpg",
+          link: "#guidemodal3"
+        },
+        {
+          title: "Γενική επισκευή τρομπέτας",
+          description: "Γενική επισκευή τρομπέτας",
+          image: "assets/img/technical_work/trumpet.jpg",
+          link: '#guidemodal4'
+        }
+      ]
+    };
+  },
 }
 </script>
 
