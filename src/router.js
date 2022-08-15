@@ -9,6 +9,7 @@ import AppRepairs from "@/pages/AppRepairs";
 import AppMaintenance from "@/pages/AppMaintenance";
 import AppMailSuccess from "@/pages/AppMailSuccess";
 import AppTerms from "@/pages/AppTerms";
+import AppError404 from "@/pages/AppError404";
 
 
 export default createRouter({
@@ -22,6 +23,7 @@ export default createRouter({
         {path: '/repairs', component: AppRepairs},
         {path: '/maintenance', component: AppMaintenance},
         {path: '/success', component: AppMailSuccess},
-        {path: '/terms', component: AppTerms}
+        {path: '/terms', component: AppTerms},
+        {path: '/:pathMatch(.*)*', component: AppError404},
     ]
 })
