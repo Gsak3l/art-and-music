@@ -14,67 +14,43 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <!--          <form method="POST" action="/success" id="contactForm" name="contactForm"-->
-          <!--                novalidate="novalidate" data-netlify="true" data-netlify-honeypot="bot-field">-->
-          <!--            <input type="hidden" name="contactForm" value="contact"/>-->
-          <!--            <div class="form-row">-->
-          <!--              <div class="col col-md-6">-->
-          <!--                <div class="form-group">-->
-          <!--                  <input name="Όνομα" class="form-control" type="name" placeholder="Όνομα *"/><small-->
-          <!--                    class="form-text text-danger help-block lead"></small>-->
-          <!--                </div>-->
-          <!--                <div class="form-group">-->
-          <!--                  <input name="Επώνυμο" class="form-control" type="surname" placeholder="Επώνυμο *"/><small-->
-          <!--                    class="form-text text-danger help-block lead"-->
-          <!--                ></small>-->
-          <!--                </div>-->
-          <!--                <div class="form-group">-->
-          <!--                  <input name="Εmail" class="form-control" type="email" placeholder="Email *"/><small-->
-          <!--                    class="form-text text-danger help-block lead"></small>-->
-          <!--                </div>-->
-          <!--              </div>-->
-          <!--              <div class="col-md-6">-->
-          <!--                <div class="form-group">-->
-          <!--									<textarea name="Μήνυμα" class="form-control" id="message" placeholder="Μήνυμα *"-->
-          <!--                            required=""></textarea-->
-          <!--                  ><small class="form-text text-danger help-block lead"></small>-->
-          <!--                </div>-->
-          <!--              </div>-->
-          <!--              <div class="col">-->
-          <!--                <div class="clearfix"></div>-->
-          <!--              </div>-->
-          <!--              <div class="col-lg-12 text-center">-->
-          <!--                <div id="success"></div>-->
-          <!--                <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">αποστολη-->
-          <!--                </button>-->
-          <!--              </div>-->
-          <!--            </div>-->
-          <!--          </form>-->
-          <!--        </div>-->
+          <form method="POST" action="/success" id="contactForm" name="contactForm"
+                data-netlify="true" data-netlify-honeypot="bot-field">
 
-          <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact">
-            <p>
-              <label>Your Name: <input type="text" name="name"/></label>
-            </p>
-            <p>
-              <label>Your Email: <input type="email" name="email"/></label>
-            </p>
-            <p>
-              <label>Your Role: <select name="role[]" multiple>
-                <option value="leader">Leader</option>
-                <option value="follower">Follower</option>
-              </select></label>
-            </p>
-            <p>
-              <label>Message: <textarea name="message"></textarea></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
+            <input type="hidden" name="contactForm" value="contact"/>
+
+            <div class="form-row">
+              <div class="col col-md-6">
+                <div class="form-group">
+                  <input name="Όνομα" class="form-control" type="name" placeholder="Όνομα *" required>
+                  <small class="form-text text-danger help-block lead"></small>
+                </div>
+                <div class="form-group">
+                  <input name="Επώνυμο" class="form-control" type="surname" placeholder="Επώνυμο *" required>
+                  <small class="form-text text-danger help-block lead"></small>
+                </div>
+                <div class="form-group">
+                  <input name="Εmail" class="form-control" type="email" placeholder="Email *" required>
+                  <small class="form-text text-danger help-block lead"></small>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+									<textarea name="Μήνυμα" class="form-control" id="message" placeholder="Μήνυμα *" required></textarea>
+                  <small class="form-text text-danger help-block lead"></small>
+                </div>
+              </div>
+              <div class="col">
+                <div class="clearfix"></div>
+              </div>
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">αποστολη
+                </button>
+              </div>
+            </div>
           </form>
-
-
         </div>
       </div>
     </div>
