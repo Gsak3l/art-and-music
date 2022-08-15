@@ -11,10 +11,12 @@
           </h3>
         </div>
       </div>
+
       <div class="row">
         <div class="col-lg-12">
           <form method="POST" action="/success" id="contactForm" name="contactForm"
-                novalidate="novalidate" data-netlify="true" data-netlify-recaptcha="true">
+                novalidate="novalidate" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="contactForm" value="contact"/>
             <div class="form-row">
               <div class="col col-md-6">
                 <div class="form-group">
@@ -50,6 +52,7 @@
           </form>
         </div>
       </div>
+
     </div>
   </section>
 </template>
