@@ -8,6 +8,7 @@ import AppTechnical from "@/pages/AppTechnical";
 import AppRepairs from "@/pages/AppRepairs";
 import AppMaintenance from "@/pages/AppMaintenance";
 import AppMailSuccess from "@/pages/AppMailSuccess";
+import AppTerms from "@/pages/AppTerms";
 
 
 export default createRouter({
@@ -20,6 +21,7 @@ export default createRouter({
         {path: '/technical', component: AppTechnical},
         {path: '/repairs', component: AppRepairs},
         {path: '/maintenance', component: AppMaintenance},
-        {path: '/success', component: AppMailSuccess}
+        {path: '/success', component: AppMailSuccess},
+        {path: '/terms', component: AppTerms}
     ]
 })

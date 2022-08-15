@@ -78,7 +78,7 @@ export default {
           description: 'Eπιστόμιο τρομπέτας Bach, επάργυρο 1C, 1 1/2C, 1 1/4C, 2C, 3C, 7C, 9C, 10C'
         },
         {
-          image: 'assets/img/spare%20parts/sourdinaTrompetas.jpg',
+          image: 'assets/img/spare_parts/sourdinaTrompetas.jpg',
           title: 'Σουρντίνα τρομπέτας D.W. 5504',
           description: 'Σουρντίνα τρομπέτας D.W. 5504 από αλουμίνιο.'
         }

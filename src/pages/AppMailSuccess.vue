@@ -4,15 +4,17 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="icon-box">
-            <i class="material-icons">&#xE876;</i>
+            <i class="fa-solid fa-check"></i>
           </div>
         </div>
         <div class="modal-body text-center">
           <h4>Τέλεια!</h4>
           <p>Το email σας στάλθηκε με επιτυχία</p>
           <a href="/">
-            <button class="btn btn-success" data-dismiss="modal"><span>Επιστροφή</span> <i
-                class="material-icons">&#xE5C8;</i></button>
+            <button class="btn btn-success" data-dismiss="modal">
+              <i class="fa-solid fa-arrow-left"></i>
+              <span>Επιστροφή</span>
+            </button>
           </a>
         </div>
       </div>

@@ -1,12 +1,11 @@
 <template>
-  <section id="portfolio" class="bg-light"
-           style="background-image: url(&quot;assets/img/cookies/cookies1.jpg&quot;);">
+  <section class="bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="text-uppercase section-heading" style="color: #fff;">Cookies<br></h2>
+          <h2 class="text-uppercase section-heading">Cookies<br></h2>
           <br>
-          <h3 class="section-subheading"><em style="color: #fff; font-weight:bold;">Τα cookie είναι ένα μικρό τμήμα κειμένου που
+          <h3 class="section-subheading"><em>Τα cookie είναι ένα μικρό τμήμα κειμένου που
             αποστέλεται στο πρόγραμμα περιήγησης από τον ιστότοπο που επισκέπτεστε. Διευκολύνει τον
             ιστότοπο να απομνημονεύσει πληροφορίες σχετικά με την επίσκεψή σας, όπως την
             προτιμώμενη γλώσσα και άλλες ρυθμίσεις. Κάτι τέτοιο μπορεί να διευκολύνει την επόμενη σας
@@ -27,5 +26,17 @@ export default {
 </script>
 
 <style scoped>
+.bg-light {
+  background-image: url('../../public/assets/img/cookies/cookies1.jpg');
+}
+
+.text-uppercase.section-heading {
+  color: #fff;
+}
+
+.section-subheading em {
+  color: #fff;
+  font-weight: bold;
+}
 
 </style>

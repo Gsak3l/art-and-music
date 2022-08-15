@@ -1,47 +1,29 @@
 <template>
-  <nav
-      class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark"
-      id="mainNav">
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="/#">Art and Music</a>
-      <button
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          class="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-toogle="collapse"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-      >
+      <button data-toggle="collapse" data-target="#navbarResponsive"
+              class="navbar-toggler navbar-toggler-right" type="button" data-toogle="collapse"
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="nav navbar-nav ml-auto text-uppercase">
           <div v-for="item in menu_items" :key="item.id">
             <li class="nav-item" role="presentation" v-if="!item.drop">
-              <a class="nav-link js-scroll-trigger" :href="item.link">{{
-                  item.text
-                }}</a>
+              <a :href="item.link" class="nav-link js-scroll-trigger">
+                {{ item.text }}
+              </a>
             </li>
             <li class="nav-item dropdown" v-else>
-              <a
-                  class="dropdown-toggle nav-link"
-                  data-toggle="dropdown"
-                  aria-expanded="false"
-                  :href="item.link"
-              >{{ item.text }}</a
-              >
+              <a :href="item.link" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
+                {{ item.text }}
+              </a>
               <div class="dropdown-menu" role="menu">
-                <a
-                    v-for="drop_item in item.drop_items"
-                    :key="drop_item.id"
-                    class="dropdown-item"
-                    role="presentation"
-                    :href="drop_item.link"
-                    style="font-size: 13px; font-family: Montserrat, sans-serif"
-                >{{ drop_item.text }}</a
-                >
+                <a v-for="drop_item in item.drop_items" :key="drop_item.id" :href="drop_item.link"
+                   class="dropdown-item" role="presentation">
+                  {{ drop_item.text }}
+                </a>
               </div>
             </li>
           </div>
@@ -115,4 +97,9 @@ export default {
 </script>
 
 
-<style scoped></style>
+<style scoped>
+.dropdown-menu a {
+  font-size: 13px;
+  font-family: Montserrat, sans-serif
+}
+</style>

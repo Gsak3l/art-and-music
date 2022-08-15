@@ -1,18 +1,11 @@
 <template>
 
-  <header
-      class="masthead"
-      id="background-image"
-      style="background-image: url('assets/img/main_images/saxophoneBlurred.jpg');
-        background-color: #343a40;
-        filter: blur(0px);
-        background-size: cover;
-        background-repeat: no-repeat;">
+  <header class="masthead" id="background-image">
     <div class="container">
       <div class="intro-text">
         <div class="intro-heading text-uppercase"><span>ART AND MUSIC</span></div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" role="button"
-           href="#services" style="color: rgb(0, 0, 0)">μαθετε περισσοτερα</a>
+        <a id="services-center-button" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" role="button"
+           href="#services">μαθετε περισσοτερα</a>
       </div>
     </div>
   </header>
@@ -54,6 +47,18 @@ export default {
 </script>
 
 <style scoped>
+#background-image {
+  background-image: url("../../../public/assets/img/main_images/saxophoneBlurred.jpg");
+  background-color: #343a40;
+  filter: blur(0px);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#services-center-button{
+  color: #000000;
+}
+
 .transition:before {
   content: '';
   height: 100%;
@@ -69,6 +74,6 @@ export default {
   background-size: cover;
   display: flex;
   /*transition: background 1s linear;*/
-  transition: background 2s linear, height 5s, transform 5s;;
+  transition: background 2s linear, height 5s, transform 5s;
 }
 </style>
