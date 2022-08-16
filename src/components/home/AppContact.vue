@@ -14,8 +14,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form method="POST" action="/success" id="contactForm" name="contactForm"
-                data-netlify="true" data-netlify-honeypot="bot-field" netlify>
+          <form method="POST" action="/success" id="contactForm" name="contactForm">
 
             <input type="hidden" name="contactForm" value="contact"/>
 
