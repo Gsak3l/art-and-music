@@ -14,9 +14,9 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form method="POST" action="/success" id="contactForm" name="contactForm">
+          <form action="/success" id="contactForm" name="contactForm" method="POST">
 
-            <input type="hidden" name="contactForm" value="contactForm"/>
+            <input type="hidden" name="contact" value="contactForm"/>
 
             <div class="form-row">
               <div class="col col-md-6">
