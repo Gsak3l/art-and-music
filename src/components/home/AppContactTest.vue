@@ -8,7 +8,7 @@
 <!--    <input name="Όνομα" type="name" placeholder="Όνομα *">-->
 <!--    <input name="Επώνυμο" type="surname" placeholder="Επώνυμο *">-->
     <input type="Email" name="email" placeholder="Email *">
-    <button id="sendMessageButton" type="submit">αποστολη</button>
+<!--    <button id="sendMessageButton" type="submit">αποστολη</button>-->
 
   </form>
 
