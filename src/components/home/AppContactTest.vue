@@ -6,7 +6,7 @@
     <input type="hidden" name="form-name" value="contactForm"/>
 
     <input type="email" name="email" placeholder="email address">
-
+    <button type="submit">αποστολη</button>
   </form>
 
 </template>
