@@ -22,7 +22,7 @@ export default createRouter({
         {path: '/technical', component: AppTechnical},
         {path: '/repairs', component: AppRepairs},
         {path: '/maintenance', component: AppMaintenance},
-        {path: '/mail-success', component: AppMailSuccess},
+        {path: '/success/mail', component: AppMailSuccess},
         {path: '/terms', component: AppTerms},
         {path: '/:pathMatch(.*)*', component: AppError404},
     ]

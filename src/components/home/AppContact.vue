@@ -14,7 +14,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form action="/mail-success" id="contactForm" name="contactForm" method="POST">
+          <form action="/success/mail" id="contactForm" name="contactForm" method="POST">
 
             <input type="hidden" name="form-name" value="contactForm"/>
 
