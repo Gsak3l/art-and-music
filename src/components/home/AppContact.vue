@@ -52,7 +52,8 @@
 
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
-                <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">αποστολη
+                <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton"
+                        type="submit" @click.stop.prevent="submit()">αποστολη
                 </button>
               </div>
 
@@ -67,6 +68,17 @@
 <script>
 export default {
   name: "AppContact",
+  data() {
+    return {
+      foobar: null
+    }
+  },
+  methods: {
+    submit() {
+      //if you want to send any data into server before redirection then you can do it here
+      this.$router.push({name: 'success'});
+    }
+  }
 };
 </script>
 
