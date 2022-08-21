@@ -16,7 +16,8 @@
 
       <div class="row" id="contact-div">
         <div class="col-lg-12">
-          <form id="contactForm" name="contactForm" method="POST" target="dummy-form">
+          <form id="contactForm" name="contactForm" method="POST" target="dummy-form"
+                v-on:submit="rerender_div">
 
             <input type="hidden" name="form-name" value="contactForm"/>
 
@@ -25,17 +26,17 @@
               <div class="col col-md-6">
 
                 <div class="form-group">
-                  <input name="Όνομα" class="form-control" type="name" placeholder="Όνομα *" required>
+                  <input name="Όνομα" class="form-control" type="text" placeholder="Όνομα *" required>
                   <small class="form-text text-danger help-block lead"></small>
                 </div>
 
                 <div class="form-group">
-                  <input name="Επώνυμο" class="form-control" type="surname" placeholder="Επώνυμο *" required>
+                  <input name="Επώνυμο" class="form-control" type="text" placeholder="Επώνυμο *" required>
                   <small class="form-text text-danger help-block lead"></small>
                 </div>
 
                 <div class="form-group">
-                  <input name="Εmail" class="form-control" type="email" placeholder="Email *" required>
+                  <input name="Email" class="form-control" type="email" placeholder="Email *" required>
                   <small class="form-text text-danger help-block lead"></small>
                 </div>
 
@@ -72,8 +73,15 @@ export default {
   name: "AppContact",
 
   methods: {
-    onSubmit() {
-      document.getElementById('contact-div').innerHTML = '<div id="myModal"> <div class="modal-dialog modal-confirm"> <div class="modal-content" style="padding: 20px; font-size: 16px; border-radius: 5px; border: none;"> <div class="modal-header" style="background: #FED136; border-bottom: none; position: relative; text-align: center; margin: -20px -20px 0; border-radius: 5px 5px 0 0; padding: 35px;"> <div class="icon-box" style="color: #fff; width: 95px; height: 95px; display: inline-block; border-radius: 50%; z-index: 9; border: 5px solid #fff; padding: 15px; text-align: center;"> <i class="fa-solid fa-check" style="font-size: 64px; margin: -4px 0 0 -4px;"></i> </div> </div> <div class="modal-body text-center"> <h4 style="text-align: center; font-size: 36px; margin: 10px 0;">Τέλεια!</h4> <p>Το email σας στάλθηκε με επιτυχία</p> <a href="/"></a></div></div></div></div>';
+    rerender_div() {
+      if (document.forms['contactForm']['Όνομα'].value.trim() !== ''
+          && document.forms['contactForm']['Επώνυμο'].value.trim() !== ''
+          && document.forms['contactForm']['Email'].value.trim() !== ''
+          && document.forms['contactForm']['Μήνυμα'].value.trim() !== '') {
+        document.getElementById('contact-div').innerHTML = '<div id="myModal"> <div class="modal-dialog modal-confirm"> <div class="modal-content" style="padding: 20px; font-size: 16px; border-radius: 5px; border: none;"> <div class="modal-header" style="background: #FED136; border-bottom: none; position: relative; text-align: center; margin: -20px -20px 0; border-radius: 5px 5px 0 0; padding: 35px;"> <div class="icon-box" style="color: #fff; width: 95px; height: 95px; display: inline-block; border-radius: 50%; z-index: 9; border: 5px solid #fff; padding: 15px; text-align: center;"> <i class="fa-solid fa-check" style="font-size: 64px; margin: -4px 0 0 -4px;"></i> </div> </div> <div class="modal-body text-center"> <h4 style="text-align: center; font-size: 36px; margin: 10px 0;">Τέλεια!</h4> <p>Το email σας στάλθηκε με επιτυχία</p> <a href="/"></a></div></div></div></div>';
+        return true
+      }
+      return false
     }
   }
 }
