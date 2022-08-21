@@ -12,11 +12,9 @@
         </div>
       </div>
 
-      <iframe name="dummy-frame" id="dummy-frame" style="display: none;"></iframe>
-
-      <div class="row">
+      <div class="row" id="contact-div">
         <div class="col-lg-12">
-          <form action="/success" id="contactForm" name="contactForm" method="POST" target="dummy-frame">
+          <form id="contactForm" name="contactForm" method="POST" onsubmit="">
 
             <input type="hidden" name="form-name" value="contactForm"/>
 
@@ -55,7 +53,7 @@
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
                 <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton"
-                        type="submit">αποστολη
+                        type="submit" ref="submit">αποστολη
                 </button>
               </div>
 
@@ -70,6 +68,15 @@
 <script>
 export default {
   name: "AppContact",
+
+  mounted: function () {
+    let myForm = document.getElementById('contactForm');
+    myForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      document.getElementById('contact-div').innerHTML = '<div id="myModal"> <div class="modal-dialog modal-confirm"> <div class="modal-content" style="padding: 20px; font-size: 16px; border-radius: 5px; border: none;"> <div class="modal-header" style="background: #FED136; border-bottom: none; position: relative; text-align: center; margin: -20px -20px 0; border-radius: 5px 5px 0 0; padding: 35px;"> <div class="icon-box" style="color: #fff; width: 95px; height: 95px; display: inline-block; border-radius: 50%; z-index: 9; border: 5px solid #fff; padding: 15px; text-align: center;"> <i class="fa-solid fa-check" style="font-size: 64px; margin: -4px 0 0 -4px;"></i> </div> </div> <div class="modal-body text-center"> <h4 style="text-align: center; font-size: 36px; margin: 10px 0;">Τέλεια!</h4> <p>Το email σας στάλθηκε με επιτυχία</p> <a href="/"></a></div></div></div></div>';
+    });
+  }
+
 };
 </script>
 
@@ -81,4 +88,6 @@ export default {
 .section-subheading {
   color: #fff
 }
+
+
 </style>
