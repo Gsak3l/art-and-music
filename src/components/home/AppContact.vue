@@ -16,7 +16,7 @@
 
       <div class="row" id="contact-div">
         <div class="col-lg-12">
-          <form id="contactForm" name="contactForm" method="POST" target="dummy-form" v-on:submit.prevent="onSubmit">
+          <form id="contactForm" name="contactForm" method="POST" target="dummy-form">
 
             <input type="hidden" name="form-name" value="contactForm"/>
 
