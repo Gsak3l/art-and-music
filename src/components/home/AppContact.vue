@@ -12,9 +12,11 @@
         </div>
       </div>
 
+      <iframe name="dummy-frame" id="dummy-frame" style="display: none;"></iframe>
+
       <div class="row">
         <div class="col-lg-12">
-          <form action="/success" id="contactForm" name="contactForm" method="POST">
+          <form action="/success" id="contactForm" name="contactForm" method="POST" target="dummy-frame">
 
             <input type="hidden" name="form-name" value="contactForm"/>
 
@@ -53,7 +55,7 @@
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
                 <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton"
-                        type="submit" @click.stop.prevent="submit()">αποστολη
+                        type="submit">αποστολη
                 </button>
               </div>
 
@@ -68,17 +70,6 @@
 <script>
 export default {
   name: "AppContact",
-  data() {
-    return {
-      foobar: null
-    }
-  },
-  methods: {
-    submit() {
-      //if you want to send any data into server before redirection then you can do it here
-      this.$router.push({name: 'success'});
-    }
-  }
 };
 </script>
 
