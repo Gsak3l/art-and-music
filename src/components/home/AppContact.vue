@@ -14,7 +14,7 @@
 
       <div class="row" id="contact-div">
         <div class="col-lg-12">
-          <form id="contactForm" name="contactForm" method="POST" onsubmit="">
+          <form id="contactForm" name="contactForm" method="POST">
 
             <input type="hidden" name="form-name" value="contactForm"/>
 
